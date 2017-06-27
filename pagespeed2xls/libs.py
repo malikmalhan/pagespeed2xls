@@ -241,12 +241,6 @@ def printUsability(ws,jsonO,index,styles,scoreOrangeThreshold,scoreRedThreshold,
 	else:
 		style = greenStyle
 	ws.write(index,2,jsonO['ruleGroups']['USABILITY']['score'],style)
-		
-	#Interstitial
-	if (jsonO['formattedResults']['ruleResults']['AvoidInterstitials']['ruleImpact'] == 0):
-		ws.write(index,3,'N/A',greenStyle)
-	else:
-		ws.write(index,3,'TBD, see https://developers.google.com/webmasters/mobile-sites/mobile-seo/common-mistakes/avoid-interstitials',brightRedStyle)
 
 	#AvoidPlugins
 	if (jsonO['formattedResults']['ruleResults']['AvoidPlugins']['ruleImpact'] == 0):
